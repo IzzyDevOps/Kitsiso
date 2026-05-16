@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>App Showcase - Thebe ya Leruo</title>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary-container": "#1b4332",
+            "on-tertiary-container": "#e76f51",
+            "on-secondary-container": "#00734d",
+            "on-tertiary": "#ffffff",
+            "outline": "#717973",
+            "tertiary-fixed-dim": "#ffb4a2",
+            "on-secondary-fixed-variant": "#005235",
+            "surface-dim": "#d9dadb",
+            "primary": "#012d1d",
+            "surface-tint": "#3f6653",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed": "#ffdad2",
+            "on-primary-fixed": "#002114",
+            "surface-container": "#edeeef",
+            "inverse-primary": "#a5d0b9",
+            "tertiary-container": "#741b04",
+            "on-tertiary-fixed": "#3c0700",
+            "on-primary": "#ffffff",
+            "on-background": "#191c1d",
+            "outline-variant": "#c1c8c2",
+            "background": "#f8f9fa",
+            "surface-bright": "#f8f9fa",
+            "on-secondary-fixed": "#002113",
+            "inverse-on-surface": "#f0f1f2",
+            "on-primary-fixed-variant": "#274e3d",
+            "tertiary": "#500c00",
+            "secondary": "#006c48",
+            "on-surface-variant": "#414844",
+            "primary-fixed": "#c1ecd4",
+            "secondary-fixed-dim": "#75daa8",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#92f7c3",
+            "on-secondary": "#ffffff",
+            "inverse-surface": "#2e3132",
+            "on-primary-container": "#86af99",
+            "surface-container-highest": "#e1e3e4",
+            "on-surface": "#191c1d",
+            "on-error-container": "#93000a",
+            "surface-variant": "#e1e3e4",
+            "error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#83260e",
+            "surface": "#f8f9fa",
+            "primary-fixed-dim": "#a5d0b9",
+            "surface-container-low": "#f3f4f5",
+            "secondary-container": "#92f7c3",
+            "surface-container-high": "#e7e8e9",
+            "error": "#ba1a1a"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "margin-desktop": "64px",
+            "base": "8px",
+            "gutter": "16px",
+            "margin-mobile": "20px",
+            "max-width": "1200px"
+          },
+          fontFamily: {
+            "headline-md": ["Source Serif 4"],
+            "headline-lg": ["Source Serif 4"],
+            "body-md": ["Work Sans"],
+            "display-lg": ["Source Serif 4"],
+            "body-lg": ["Work Sans"],
+            "headline-lg-mobile": ["Source Serif 4"],
+            "label-sm": ["Work Sans"]
+          },
+          fontSize: {
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+            "label-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .custom-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .grassroots-shadow {
+      box-shadow: 0 4px 12px rgba(27, 67, 50, 0.05);
+    }
+
+    .ghost-border {
+      border: 1px solid rgba(1, 45, 29, 0.1);
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+  <!-- Top Navigation Bar -->
+  <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm border-b border-outline-variant/30">
+    <div class="flex justify-between items-center max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-4">
+
+      <!-- Logo -->
+      <a href="index.html" class="font-headline-lg text-headline-lg font-bold text-primary">
+        Kitsiso
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex gap-8 items-center">
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="index.html">
+          Home
+        </a>
+
+        <a class="text-primary font-bold border-b-2 border-on-tertiary-container pb-1 font-body-md text-body-md" href="app.html">
+          App
+        </a>
+
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="pricing.html">
+          Pricing
+        </a>
+
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="about.html">
+          About
+        </a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <a href="#download" class="hidden sm:inline-flex bg-on-tertiary-container text-on-tertiary px-6 py-2 rounded-xl font-bold hover:opacity-90 transition-opacity active:scale-95 duration-150 ease-in-out font-body-md text-body-md">
+        Download App
+      </a>
+
+      <!-- Mobile Menu -->
+      <details class="md:hidden relative">
+        <summary class="list-none cursor-pointer w-11 h-11 rounded-full bg-surface-container flex items-center justify-center ghost-border">
+          <span class="material-symbols-outlined text-primary">menu</span>
+        </summary>
+
+        <div class="absolute right-0 mt-4 w-56 bg-white rounded-xl grassroots-shadow ghost-border overflow-hidden">
+          <a class="block px-5 py-4 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="index.html">
+            Home
+          </a>
+
+          <a class="block px-5 py-4 text-primary font-bold bg-surface-container-low" href="app.html">
+            App
+          </a>
+
+          <a class="block px-5 py-4 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="pricing.html">
+            Pricing
+          </a>
+
+          <a class="block px-5 py-4 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="about.html">
+            About
+          </a>
+
+          <a class="block m-4 text-center bg-on-tertiary-container text-white px-5 py-3 rounded-full font-label-sm hover:opacity-90 transition-opacity" href="#download">
+            Download App
+          </a>
+        </div>
+      </details>
+
+    </div>
+  </header>
+
+  <main class="pt-32 pb-24">
+
+    <!-- Hero Section -->
+    <section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center mb-16">
+      <span class="inline-block px-4 py-1.5 bg-primary-container text-on-primary-container rounded-full font-label-sm text-label-sm mb-6">
+        App Showcase
+      </span>
+
+      <h1 class="font-display-lg text-[40px] md:text-display-lg text-primary mb-4 leading-tight">
+        See Kitsiso in action
+      </h1>
+
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+        Empowering Batswana farmers with real-time AI insights, expert veterinary connections, and community support right in the palm of your hand.
+      </p>
+    </section>
+
+    <!-- App Gallery Bento Grid -->
+    <section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+
+        <!-- Column 1: Monitoring & Alerts -->
+        <div class="flex flex-col gap-12">
+
+          <!-- Screen 1: Dashboard -->
+          <div class="group">
+            <div class="relative mx-auto border-[8px] border-primary-container rounded-[2.5rem] h-[600px] w-[300px] bg-primary overflow-hidden shadow-2xl transition-transform duration-500 group-hover:-translate-y-2">
+              <div class="absolute top-0 w-full h-6 bg-primary-container z-10 flex justify-center items-end">
+                <div class="w-20 h-4 bg-primary rounded-t-lg"></div>
+              </div>
+
+              <div class="p-4 pt-8 h-full flex flex-col gap-4">
+
+                <div class="bg-error-container text-on-error-container p-3 rounded-xl flex items-center gap-3">
+                  <span class="material-symbols-outlined">warning</span>
+
+                  <div>
+                    <div class="font-bold text-label-sm">
+                      FMD ALERT
+                    </div>
+
+                    <div class="text-[10px] leading-tight">
+                      Outbreak reported in Zone 6. Secure perimeter.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white/10 p-4 rounded-2xl">
+                  <div class="text-white/60 text-[12px] mb-1">
+                    Herd Status
+                  </div>
+
+                  <div class="text-white font-bold text-headline-md">
+                    124 Healthy
+                  </div>
+
+                  <div class="w-full bg-white/20 h-2 rounded-full mt-2">
+                    <div class="bg-secondary-fixed w-[92%] h-full rounded-full"></div>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2">
+                  <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+                    <span class="material-symbols-outlined text-secondary-fixed text-sm">thermometer</span>
+                    <div class="text-white font-bold">38.5°C</div>
+                    <div class="text-white/40 text-[10px]">Avg Temp</div>
+                  </div>
+
+                  <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+                    <span class="material-symbols-outlined text-secondary-fixed text-sm">water_drop</span>
+                    <div class="text-white font-bold">92%</div>
+                    <div class="text-white/40 text-[10px]">Hydration</div>
+                  </div>
+                </div>
+
+                <div class="mt-auto">
+                  <div class="h-32 bg-white/5 rounded-xl border border-dashed border-white/20 flex flex-col items-center justify-center text-white/40">
+                    <span class="material-symbols-outlined">add_circle</span>
+                    <span class="text-[10px] mt-1">Log Activity</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mt-6 text-center md:text-left">
+              <h3 class="font-headline-md text-headline-md text-primary">
+                Smart Dashboard
+              </h3>
+
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Real-time biosecurity alerts and herd health vitals at a glance.
+              </p>
+            </div>
+          </div>
+
+          <!-- Screen 4: Community -->
+          <div class="group">
+            <div class="relative mx-auto border-[8px] border-primary-container rounded-[2.5rem] h-[600px] w-[300px] bg-primary overflow-hidden shadow-2xl transition-transform duration-500 group-hover:-translate-y-2">
+              <div class="p-4 pt-10 h-full flex flex-col gap-4">
+
+                <div class="text-white font-bold text-headline-md mb-2">
+                  Community
+                </div>
+
+                <div class="bg-white/10 p-4 rounded-2xl">
+                  <div class="flex items-center gap-2 mb-2">
+                    <div class="w-8 h-8 rounded-full bg-secondary-container"></div>
+
+                    <div>
+                      <div class="text-white text-label-sm">Thabo M.</div>
+                      <div class="text-white/40 text-[10px]">2 hours ago</div>
+                    </div>
+                  </div>
+
+                  <p class="text-white/80 text-[12px] mb-3">
+                    Does anyone know where to find drought-resistant fodder near Ghanzi?
+                  </p>
+
+                  <div class="flex items-center gap-2 bg-on-secondary-container/20 p-2 rounded-lg border border-on-secondary-container/30">
+                    <span class="material-symbols-outlined text-secondary-fixed text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    <span class="text-secondary-fixed font-bold text-[10px]">VET VERIFIED RESPONSE</span>
+                  </div>
+                </div>
+
+                <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
+                  <div class="flex items-center gap-2 mb-2">
+                    <div class="w-8 h-8 rounded-full bg-tertiary-fixed"></div>
+
+                    <div>
+                      <div class="text-white text-label-sm">Dr. K. Seretse</div>
+                      <div class="text-white/40 text-[10px]">Just now</div>
+                    </div>
+                  </div>
+
+                  <p class="text-white/80 text-[12px]">
+                    Check the cooperative in Sehitwa, they just received a shipment...
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mt-6 text-center md:text-left">
+              <h3 class="font-headline-md text-headline-md text-primary">
+                Knowledge Hub
+              </h3>
+
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Crowdsourced wisdom backed by verified veterinary professionals.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Column 2: AI & Diagnosis -->
+        <div class="flex flex-col gap-12 md:mt-12">
+
+          <!-- Screen 2: AI Chat -->
+          <div class="group md:scale-110">
+            <div class="relative mx-auto border-[8px] border-primary-container rounded-[3rem] h-[640px] w-[320px] bg-primary overflow-hidden shadow-[0_32px_64px_-16px_rgba(27,67,50,0.3)] transition-transform duration-500 group-hover:-translate-y-4">
+              <div class="p-4 pt-10 h-full flex flex-col">
+
+                <div class="flex items-center gap-3 mb-6">
+                  <div class="w-10 h-10 rounded-full bg-on-tertiary-container flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white">psychology</span>
+                  </div>
+
+                  <div>
+                    <div class="text-white font-bold">Kitsiso AI</div>
+
+                    <div class="text-secondary-fixed text-[10px] flex items-center gap-1">
+                      <span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-pulse"></span>
+                      Online
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex-1 space-y-4 overflow-y-auto custom-scrollbar">
+                  <div class="bg-white/5 p-3 rounded-2xl rounded-tl-none mr-8">
+                    <p class="text-white/80 text-[13px]">
+                      Upload a photo or describe the symptoms you're seeing in your livestock.
+                    </p>
+                  </div>
+
+                  <div class="bg-on-tertiary-container/20 p-2 rounded-xl self-end ml-8 border border-on-tertiary-container/30">
+                    <img
+                      class="rounded-lg w-full aspect-video object-cover"
+                      alt="Cow hoof photo being analyzed by Kitsiso AI"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqi5gQjaL54S_tnzz1KMt1NEuC_dMVr7q18n4p4DI4NyFj5HltmKClZGVFc2e2gs2evJM-LEzKHydAU9zV9P1pfzGQp0A3qNJDWZkchndLxiGeQPJZcKti3s7ldyk7kb02YO4iSfN4jHU29P4MRQCC16ZKOI6_CY90UjmoEERwXt1GwJBG8DOnyx_Ab-Qe1kjJVaqwp4OaVSl_z_P4_m1mSgAdc8azYj4-ZyTzJXtx3gkim7-1vpsFP0qEB1VZgNHZvk3YoEZiOpM"
+                    >
+                  </div>
+
+                  <div class="bg-white/5 p-3 rounded-2xl rounded-tl-none mr-8">
+                    <p class="text-white/80 text-[13px]">
+                      Analyzing image... I detect signs of possible dermatitis. Please check if there is inflammation between the hooves.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="mt-4 p-3 bg-white/10 rounded-full flex items-center justify-between">
+                  <span class="text-white/40 text-sm ml-2">Type symptoms...</span>
+
+                  <div class="w-8 h-8 rounded-full bg-on-tertiary-container flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white text-sm">send</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mt-12 text-center">
+              <h3 class="font-headline-md text-headline-md text-primary">
+                AI Symptom Checker
+              </h3>
+
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Instant diagnostics powered by machine learning, trained for African cattle breeds.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Column 3: Logistics & Records -->
+        <div class="flex flex-col gap-12">
+
+          <!-- Screen 3: Vet Locator -->
+          <div class="group">
+            <div class="relative mx-auto border-[8px] border-primary-container rounded-[2.5rem] h-[600px] w-[300px] bg-primary overflow-hidden shadow-2xl transition-transform duration-500 group-hover:-translate-y-2">
+
+              <div class="absolute inset-0">
+                <img
+                  class="w-full h-full object-cover opacity-60 grayscale brightness-50"
+                  alt="Veterinary locator map interface"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSsw16eYPfYJhUXbtEn5dXwm3yCrl-axd2pZizRiHuKMLnhXutOUHWrmWDFznqBPsfVrPNVDY9JnoCvIUl-e70GagWRPQfToPYuPJ-DpYIY8rX0QSPqTB2J1YrNrsx08g9srl9mxb05exdD3GxEV-0y6AKa5oB_-kNU5tnoZyCdpPU-clqchp0NrplDtMc8DwJhxGAseNZgI3pXJ-CrZ4LiWUesqtzL3Y41sqaFGgwB2QpW9c0xH1PJCXXMlP_sGXJVJleiWrDoaQ"
+                >
+              </div>
+
+              <div class="absolute bottom-4 left-4 right-4 bg-primary/90 backdrop-blur-md p-4 rounded-2xl border border-white/10">
+                <div class="flex justify-between items-center mb-3">
+                  <div class="text-white font-bold text-label-sm">
+                    Nearest Vets
+                  </div>
+
+                  <span class="material-symbols-outlined text-white/40 text-sm">filter_list</span>
+                </div>
+
+                <div class="space-y-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-secondary-fixed/20 flex items-center justify-center">
+                      <span class="material-symbols-outlined text-secondary-fixed">medical_services</span>
+                    </div>
+
+                    <div>
+                      <div class="text-white text-[12px] font-bold">Kgalagadi Vet</div>
+                      <div class="text-white/40 text-[10px]">12km away • Open</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="mt-6 text-center md:text-left">
+              <h3 class="font-headline-md text-headline-md text-primary">
+                Emergency Locator
+              </h3>
+
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Quickly find and navigate to the nearest certified veterinary services.
+              </p>
+            </div>
+          </div>
+
+          <!-- Screen 5: Health Records -->
+          <div class="group">
+            <div class="relative mx-auto border-[8px] border-primary-container rounded-[2.5rem] h-[600px] w-[300px] bg-primary overflow-hidden shadow-2xl transition-transform duration-500 group-hover:-translate-y-2">
+              <div class="p-4 pt-10 h-full flex flex-col gap-4">
+
+                <div class="flex justify-between items-center">
+                  <div class="text-white font-bold text-headline-md">
+                    Herd Records
+                  </div>
+
+                  <span class="material-symbols-outlined text-white">search</span>
+                </div>
+
+                <div class="space-y-3">
+                  <div class="bg-white/5 p-3 rounded-xl border border-white/10 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-surface-variant/20 overflow-hidden">
+                        <img
+                          class="w-full h-full object-cover"
+                          alt="Cow record profile"
+                          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf6TVO8dY2Lqm2EJZcI4Vga_qInhWAAuaNa-a34vpj-o5EsV67EXFQrZVOkYiWh4OMD580xPCysUgyeRA91F1rtoJz2-ysPOItMwSFMfrtEhSiUo_m6vGrfr0NgW0WnsC7C2j0pkfaXgLp3AmMCRM18aBJ61couGr8dww7OXllwbhn_QIJ2bliCefZ_rtzVTdj9A5qZh7qTCazTO_utd8cNSROjByWAk8N3iP_lsyJEHp1CmA3K0vsqFsICZ5E0g7bntuz4Oe_-fY"
+                        >
+                      </div>
+
+                      <div>
+                        <div class="text-white text-label-sm">Tag #4022</div>
+                        <div class="text-white/40 text-[10px]">Last Vax: Jan 12</div>
+                      </div>
+                    </div>
+
+                    <span class="material-symbols-outlined text-secondary-fixed text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                  </div>
+
+                  <div class="bg-white/5 p-3 rounded-xl border border-white/10 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-surface-variant/20 overflow-hidden">
+                        <img
+                          class="w-full h-full object-cover"
+                          alt="Bull record profile"
+                          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyxYOgqA5UB21opPpd7P41pwnt6QTgyLp6g4VhIEVB8cW1PJ4cljyfqV5Azafeyog0ApFxhfiiqx2GnVyUZBhXdXYLySLlNyrUv_NEjgCCKPsQKTJ20lMVFLamM5y2J35tPEytTLRrZR2-fhfwLO0C44CNZXZWl-p61mVW6F_6nWyi6eAVLexGldlGcWUrKkcAGGJVFodDNngJj0uBS3oPvMdy_wDkJqcTVjdrb-cx5J2JX-TzzpQsel5DyfK_hlIGj069K-K4-xM"
+                        >
+                      </div>
+
+                      <div>
+                        <div class="text-white text-label-sm">Tag #4025</div>
+                        <div class="text-white/40 text-[10px]">Due for deworming</div>
+                      </div>
+                    </div>
+
+                    <span class="material-symbols-outlined text-on-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">error</span>
+                  </div>
+                </div>
+
+                <button class="mt-auto w-full py-3 bg-secondary-container text-on-secondary-container rounded-xl font-bold text-sm">
+                  Generate Health Report
+                </button>
+
+              </div>
+            </div>
+
+            <div class="mt-6 text-center md:text-left">
+              <h3 class="font-headline-md text-headline-md text-primary">
+                Herd Management
+              </h3>
+
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Digital passports for every animal, tracking vaccinations and growth history.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="download" class="mt-32 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+      <div class="bg-primary-container rounded-[2rem] p-12 text-center relative overflow-hidden">
+
+        <div class="absolute top-0 right-0 w-64 h-64 bg-on-secondary-container/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-on-tertiary-container/10 rounded-full -ml-32 -mb-32 blur-3xl"></div>
+
+        <div class="relative z-10">
+          <h2 class="font-headline-lg text-headline-lg text-white mb-6">
+            Ready to shield your herd?
+          </h2>
+
+          <p class="font-body-lg text-body-lg text-on-primary-container mb-10 max-w-xl mx-auto">
+            Join over 5,000 Batswana farmers who trust Kitsiso for their livestock’s future. Available now on Play Store and App Store.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#download" class="bg-on-tertiary-container text-on-tertiary px-10 py-4 rounded-xl font-bold text-lg hover:shadow-lg transition-all active:scale-95 text-center">
+              Download for Android
+            </a>
+
+            <a href="#download" class="border-2 border-on-primary-container text-on-primary-container px-10 py-4 rounded-xl font-bold text-lg hover:bg-on-primary-container/10 transition-all active:scale-95 text-center">
+              Download for iOS
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-primary-container w-full rounded-t-xl mt-24">
+    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between gap-gutter">
+
+      <div class="flex flex-col gap-4">
+        <a href="index.html" class="font-headline-md text-headline-md font-bold text-on-primary">
+          Kitsiso
+        </a>
+
+        <p class="text-on-primary-container/80 text-body-md max-w-xs">
+          AI-powered livestock protection for Botswana farmers.
+        </p>
+
+        <p class="text-on-primary-container/60 text-label-sm">
+          © 2026 Kitsiso. Thebe ya Leruo.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+
+        <div class="flex flex-col gap-3">
+          <span class="font-label-sm text-on-tertiary-container uppercase tracking-widest">
+            Platform
+          </span>
+
+          <a class="text-on-primary-container/80 hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container underline-offset-4 text-label-sm" href="index.html">
+            Home
+          </a>
+
+          <a class="text-on-tertiary-container font-semibold text-label-sm" href="app.html">
+            App Showcase
+          </a>
+
+          <a class="text-on-primary-container/80 hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container underline-offset-4 text-label-sm" href="pricing.html">
+            Pricing
+          </a>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <span class="font-label-sm text-on-tertiary-container uppercase tracking-widest">
+            Company
+          </span>
+
+          <a class="text-on-primary-container/80 hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container underline-offset-4 text-label-sm" href="about.html">
+            About Us
+          </a>
+
+          <a class="text-on-primary-container/80 hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container underline-offset-4 text-label-sm" href="about.html#contact">
+            Contact
+          </a>
+
+          <a class="text-on-primary-container/80 hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container underline-offset-4 text-label-sm" href="about.html#privacy">
+            Privacy Policy
+          </a>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <span class="font-label-sm text-on-tertiary-container uppercase tracking-widest">
+            Action
+          </span>
+
+          <a class="text-on-primary-container/80 hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container underline-offset-4 text-label-sm" href="#download">
+            Download App
+          </a>
+
+          <a class="text-on-primary-container/80 hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container underline-offset-4 text-label-sm" href="pricing.html">
+            View Plans
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
