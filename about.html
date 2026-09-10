@@ -3,570 +3,290 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+  <link rel="icon" type="image/png" href="image/kitsiso-logo.png">
   <title>About - Thebe ya Leruo</title>
-
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
   <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
       theme: {
         extend: {
           colors: {
-            "primary-container": "#1b4332",
-            "on-tertiary-container": "#e76f51",
-            "on-secondary-container": "#00734d",
-            "on-tertiary": "#ffffff",
-            "outline": "#717973",
-            "tertiary-fixed-dim": "#ffb4a2",
-            "on-secondary-fixed-variant": "#005235",
-            "surface-dim": "#d9dadb",
             "primary": "#012d1d",
-            "surface-tint": "#3f6653",
-            "surface-container-lowest": "#ffffff",
-            "tertiary-fixed": "#ffdad2",
-            "on-primary-fixed": "#002114",
-            "surface-container": "#edeeef",
-            "inverse-primary": "#a5d0b9",
-            "tertiary-container": "#741b04",
-            "on-tertiary-fixed": "#3c0700",
-            "on-primary": "#ffffff",
-            "on-background": "#191c1d",
-            "outline-variant": "#c1c8c2",
-            "background": "#f8f9fa",
-            "surface-bright": "#f8f9fa",
-            "on-secondary-fixed": "#002113",
-            "inverse-on-surface": "#f0f1f2",
-            "on-primary-fixed-variant": "#274e3d",
-            "tertiary": "#500c00",
+            "primary-container": "#1b4332",
             "secondary": "#006c48",
-            "on-surface-variant": "#414844",
-            "primary-fixed": "#c1ecd4",
-            "secondary-fixed-dim": "#75daa8",
-            "on-error": "#ffffff",
-            "secondary-fixed": "#92f7c3",
-            "on-secondary": "#ffffff",
-            "inverse-surface": "#2e3132",
-            "on-primary-container": "#86af99",
-            "surface-container-highest": "#e1e3e4",
+            "on-primary": "#ffffff",
+            "surface": "#ffffff",
             "on-surface": "#191c1d",
-            "on-error-container": "#93000a",
-            "surface-variant": "#e1e3e4",
-            "error-container": "#ffdad6",
-            "on-tertiary-fixed-variant": "#83260e",
-            "surface": "#f8f9fa",
-            "primary-fixed-dim": "#a5d0b9",
-            "surface-container-low": "#f3f4f5",
-            "secondary-container": "#92f7c3",
-            "surface-container-high": "#e7e8e9",
-            "error": "#ba1a1a"
-          },
-          borderRadius: {
-            "DEFAULT": "0.25rem",
-            "lg": "0.5rem",
-            "xl": "0.75rem",
-            "full": "9999px"
-          },
-          spacing: {
-            "margin-desktop": "64px",
-            "base": "8px",
-            "gutter": "16px",
-            "margin-mobile": "20px",
-            "max-width": "1200px"
+            "on-surface-variant": "#414844",
+            "outline-variant": "#c1c8c2",
+            "accent": "#b08d57",
+            "accent-dark": "#8a6d40",
           },
           fontFamily: {
-            "headline-md": ["Source Serif 4"],
             "headline-lg": ["Source Serif 4"],
-            "body-md": ["Work Sans"],
-            "display-lg": ["Source Serif 4"],
+            "headline-md": ["Source Serif 4"],
             "body-lg": ["Work Sans"],
-            "headline-lg-mobile": ["Source Serif 4"],
+            "body-md": ["Work Sans"],
             "label-sm": ["Work Sans"]
           },
-          fontSize: {
-            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
-            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
-            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-            "display-lg": ["48px", { "lineHeight": "56px", "fontWeight": "700" }],
-            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
-            "label-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-15px)' },
+            },
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
           }
         }
       }
     }
   </script>
-
   <style>
-    .glass-card {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(1, 45, 29, 0.1);
-    }
-
-    .grassroots-shadow {
-      box-shadow: 0 4px 12px rgba(27, 67, 50, 0.05);
-    }
-
-    .ghost-border {
-      border: 1px solid rgba(1, 45, 29, 0.1);
-    }
-
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      vertical-align: middle;
-    }
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+    .grassroots-shadow { box-shadow: 0 8px 30px rgba(1, 45, 29, 0.06); }
+    summary::-webkit-details-marker { display: none; }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
-
-<body class="bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-on-tertiary-container selection:text-white">
+<body class="bg-[#fcfdfc] text-on-surface font-body-md selection:bg-primary-container selection:text-white overflow-x-hidden">
 
   <!-- Top Navigation Bar -->
-  <nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm border-b border-outline-variant/30">
-    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-4 flex justify-between items-center">
-
-      <!-- Logo -->
-      <a href="index.html" class="font-headline-lg text-headline-lg font-bold text-primary">
-        Kitsiso
+  <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-lg shadow-sm border-b border-gray-100 transition-all">
+    <div class="flex justify-between items-center max-w-[1200px] mx-auto px-6 py-4">
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <img src="image/kitsiso-logo.png" alt="Kitsiso logo" class="h-8 md:h-9 w-auto transition-transform group-hover:scale-105">
+        <span class="font-headline-lg text-2xl font-bold text-primary">Kitsiso</span>
       </a>
-
-      <!-- Desktop Navigation -->
-      <div class="hidden md:flex gap-8 items-center">
-        <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="index.html">
-          Home
-        </a>
-
-        <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="app.html">
-          App
-        </a>
-
-        <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="pricing.html">
-          Pricing
-        </a>
-
-        <a class="text-primary font-bold border-b-2 border-on-tertiary-container pb-1 font-body-md text-body-md" href="about.html">
-          About
-        </a>
+      
+      <div class="hidden md:flex items-center gap-8">
+        <a class="text-on-surface-variant font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+        <a class="text-primary font-bold border-b-2 border-primary pb-1" href="about.html">About</a>
+        <a class="text-on-surface-variant font-medium hover:text-primary transition-colors" href="app.html">App Showcase</a>
+        <a class="text-on-surface-variant font-medium hover:text-primary transition-colors" href="pricing.html">Pricing</a>
       </div>
 
-      <!-- Desktop CTA -->
-      <a href="app.html#download" class="hidden md:inline-flex bg-on-tertiary-container text-white px-6 py-2.5 rounded-full font-bold hover:opacity-90 transition-opacity active:scale-95 duration-150">
-        Download App
+      <a href="#contact" class="hidden sm:inline-flex bg-primary text-white px-6 py-2.5 rounded-full font-label-sm font-medium hover:bg-primary-container hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95">
+        Contact Us
       </a>
 
-      <!-- Mobile Menu -->
       <details class="md:hidden relative">
-        <summary class="list-none cursor-pointer w-11 h-11 rounded-full bg-surface-container flex items-center justify-center ghost-border">
+        <summary class="list-none cursor-pointer w-11 h-11 rounded-full flex items-center justify-center bg-gray-50 border border-gray-200 hover:bg-gray-100 transition-colors">
           <span class="material-symbols-outlined text-primary">menu</span>
         </summary>
-
-        <div class="absolute right-0 mt-4 w-56 bg-white rounded-xl grassroots-shadow ghost-border overflow-hidden">
-          <a class="block px-5 py-4 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="index.html">
-            Home
-          </a>
-
-          <a class="block px-5 py-4 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="app.html">
-            App
-          </a>
-
-          <a class="block px-5 py-4 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="pricing.html">
-            Pricing
-          </a>
-
-          <a class="block px-5 py-4 text-primary font-bold bg-surface-container-low" href="about.html">
-            About
-          </a>
-
-          <a class="block m-4 text-center bg-on-tertiary-container text-white px-5 py-3 rounded-full font-label-sm hover:opacity-90 transition-opacity" href="app.html#download">
-            Download App
-          </a>
+        <div class="absolute right-0 mt-4 w-56 bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 p-2">
+          <a class="block px-4 py-3 rounded-xl text-on-surface-variant font-medium hover:bg-gray-50 transition-colors mb-1" href="index.html">Home</a>
+          <a class="block px-4 py-3 rounded-xl text-primary font-bold bg-primary/5 mb-1" href="about.html">About</a>
+          <a class="block px-4 py-3 rounded-xl text-on-surface-variant font-medium hover:bg-gray-50 transition-colors mb-1" href="app.html">App Showcase</a>
+          <a class="block px-4 py-3 rounded-xl text-on-surface-variant font-medium hover:bg-gray-50 transition-colors" href="pricing.html">Pricing</a>
         </div>
       </details>
-
     </div>
   </nav>
 
-  <main class="pt-24 pb-20">
-
+  <main class="pt-32 pb-20 lg:pt-40">
     <!-- Hero Section -->
-    <section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-24 grid md:grid-cols-2 gap-12 items-center">
-      <div class="space-y-6">
-        <span class="inline-block px-4 py-1.5 bg-primary-container text-on-primary-container rounded-full font-label-sm text-label-sm">
-          Shielding the Herd
+    <section class="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10 mb-24">
+      
+      <!-- Abstract Background Elements -->
+      <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute -top-[10%] -left-[10%] w-[500px] h-[500px] rounded-full bg-primary/5 blur-3xl"></div>
+      </div>
+
+      <!-- Text Content -->
+      <div class="space-y-6 animate-fade-in-up">
+        <span class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full font-bold text-sm tracking-wide border border-primary/10">
+          Our Mission
         </span>
-
-        <h1 class="font-display-lg text-[40px] md:text-display-lg text-primary leading-tight">
-          Rooted in the Field,<br>
-          Built for the Future.
+        <h1 class="font-headline-lg text-5xl lg:text-6xl text-primary font-bold leading-[1.1] tracking-tight">
+          Rooted in the Field,<br>Built for the Future.
         </h1>
-
-        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-          United by a mission to protect the backbone of Botswana's economy: our livestock.
+        <p class="text-on-surface-variant text-lg max-w-xl leading-relaxed">
+          United by a mission to protect the backbone of Botswana's economy: our livestock. Kitsiso was born from a deep understanding of local farming challenges. We combine grassroots agricultural knowledge with advanced artificial intelligence to give farmers the tools they need to act earlier, reduce avoidable losses, and safeguard their heritage.
         </p>
-
-        <div class="flex flex-col sm:flex-row gap-4 pt-4">
-          <a href="app.html" class="bg-on-tertiary-container text-white px-7 py-3 rounded-xl font-bold hover:opacity-90 transition-opacity text-center">
-            View the App
-          </a>
-
-          <a href="#team" class="border-2 border-primary text-primary px-7 py-3 rounded-xl font-bold hover:bg-primary/5 transition-colors text-center">
+        <div class="flex gap-4 pt-4">
+          <a href="#team" class="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-container hover:shadow-xl hover:shadow-primary/20 transition-all active:scale-95 text-center">
             Meet the Team
           </a>
         </div>
       </div>
 
-      <div class="relative h-[400px] rounded-xl overflow-hidden grassroots-shadow">
-        <img
-          alt="Botswana landscape with cattle grazing at sunset"
-          class="w-full h-full object-cover"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQuDsaqWVPX6vDpLJ7wWe5yS5cOS4GtlTcuDeikhPpjHr1pprXApzSJK5r72T7JJMDG625Y5sAV3-EfeVtOHp1-izFrFJV2GTAHaSbCoKvu8DerNRh2RhD4RArsuJWImTO-_nnfCdzT_KbGmcD7zPbAFS8486hP8A0ewbwxx3WKn8nOxSj7QkTAg6sHkDkAmLkxPa1zEEBvnk8cVCEa6ct724tpp9wmncB-QFjfdhveILSAdDEGXnvx_-YqsqX8gTlFd0PWTkm6wg"
-        >
-
-        <div class="absolute inset-0 bg-primary-container/10"></div>
-      </div>
-    </section>
-
-    <!-- Mission Quote Section -->
-    <section class="bg-primary-container text-on-primary py-20">
-      <div class="max-w-[800px] mx-auto px-margin-mobile text-center">
-        <span class="material-symbols-outlined text-6xl text-on-tertiary-container opacity-40 mb-6">
-          format_quote
-        </span>
-
-        <blockquote class="font-headline-lg text-headline-lg leading-relaxed italic mb-8">
-          "Kitsiso was born from watching farmers in Botswana lose livestock because they could not get help in time. We built the app we wished existed."
-        </blockquote>
-
-        <div class="h-px w-24 bg-on-tertiary-container mx-auto mb-4"></div>
-
-        <p class="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container">
-          The Kitsiso Founders
-        </p>
+      <!-- Image Mockup -->
+      <div class="flex justify-center items-center lg:justify-end animate-fade-in-up" style="animation-delay: 0.2s;">
+        <div class="relative mx-auto w-[280px] sm:w-[320px] animate-float z-10">
+          <!-- Glowing backdrop -->
+          <div class="absolute -inset-6 bg-gradient-to-tr from-secondary/30 to-accent/20 rounded-full blur-2xl opacity-70"></div>
+          
+          <!-- Sleek Smartphone Bezel with Dashboard Image -->
+          <div class="relative rounded-[3rem] border-[12px] border-gray-900 bg-gray-900 shadow-2xl overflow-hidden aspect-[1/2.1] ring-1 ring-white/20">
+            <img alt="Farmer using Kitsiso AI" class="w-full h-full object-cover object-top" src="image/WhatsApp%20Image%202026-08-30%20at%2015.51.08%20(1).jpeg">
+            <!-- Subtle screen glare -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 pointer-events-none"></div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Values Section -->
-    <section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-24">
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
-          Why Kitsiso Exists
-        </h2>
-
-        <p class="font-body-lg text-body-lg text-on-surface-variant">
+    <section class="max-w-[1200px] mx-auto px-6 py-24 bg-gray-50 rounded-[2.5rem] border border-gray-100">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-headline-lg text-4xl md:text-5xl text-primary mb-6 font-bold tracking-tight">Why Kitsiso Exists</h2>
+        <p class="text-on-surface-variant text-lg leading-relaxed">
           Kitsiso combines local farming realities, accessible design, and AI-assisted livestock health support so that farmers can act earlier, reduce avoidable losses, and manage animal care with confidence.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-        <div class="bg-white rounded-xl p-8 grassroots-shadow ghost-border">
-          <div class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-6">
-            <span class="material-symbols-outlined text-on-primary-fixed-variant">agriculture</span>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="group bg-white rounded-2xl p-8 grassroots-shadow border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="w-14 h-14 bg-primary/5 group-hover:bg-primary rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
+            <span class="material-symbols-outlined text-primary group-hover:text-white text-3xl transition-colors">agriculture</span>
           </div>
-
-          <h3 class="font-headline-md text-headline-md text-primary mb-3">
-            Farmer First
-          </h3>
-
-          <p class="font-body-md text-body-md text-on-surface-variant">
-            The platform is designed around the daily challenges of farmers, from kraal monitoring to emergency livestock guidance.
-          </p>
+          <h3 class="font-headline-md text-2xl text-primary mb-3 font-bold">Farmer First</h3>
+          <p class="text-on-surface-variant leading-relaxed">Designed around the daily challenges of farmers, from kraal monitoring to emergency livestock guidance.</p>
         </div>
 
-        <div class="bg-white rounded-xl p-8 grassroots-shadow ghost-border">
-          <div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-6">
-            <span class="material-symbols-outlined text-on-secondary-container">psychology</span>
+        <div class="group bg-white rounded-2xl p-8 grassroots-shadow border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="w-14 h-14 bg-secondary/10 group-hover:bg-secondary rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
+            <span class="material-symbols-outlined text-secondary group-hover:text-white text-3xl transition-colors">psychology</span>
           </div>
-
-          <h3 class="font-headline-md text-headline-md text-primary mb-3">
-            Practical AI
-          </h3>
-
-          <p class="font-body-md text-body-md text-on-surface-variant">
-            Kitsiso uses AI to support quick symptom checking, photo-based observations, and early decision-making.
-          </p>
+          <h3 class="font-headline-md text-2xl text-primary mb-3 font-bold">Practical AI</h3>
+          <p class="text-on-surface-variant leading-relaxed">Uses AI to support quick symptom checking, photo-based observations, and early decision-making.</p>
         </div>
 
-        <div class="bg-white rounded-xl p-8 grassroots-shadow ghost-border">
-          <div class="w-12 h-12 bg-tertiary-fixed rounded-lg flex items-center justify-center mb-6">
-            <span class="material-symbols-outlined text-on-tertiary-fixed-variant">groups</span>
+        <div class="group bg-white rounded-2xl p-8 grassroots-shadow border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="w-14 h-14 bg-primary/5 group-hover:bg-primary rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
+            <span class="material-symbols-outlined text-primary group-hover:text-white text-3xl transition-colors">groups</span>
           </div>
-
-          <h3 class="font-headline-md text-headline-md text-primary mb-3">
-            Built for Botswana
-          </h3>
-
-          <p class="font-body-md text-body-md text-on-surface-variant">
-            The solution is shaped around Botswana’s livestock economy, local languages, district needs, and veterinary support networks.
-          </p>
+          <h3 class="font-headline-md text-2xl text-primary mb-3 font-bold">Built for Botswana</h3>
+          <p class="text-on-surface-variant leading-relaxed">Shaped around Botswana’s livestock economy, local languages, district needs, and veterinary support networks.</p>
         </div>
       </div>
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-24">
-      <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-        <div class="max-w-xl">
-          <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
-            The Minds Behind the Shield
-          </h2>
-
-          <p class="font-body-md text-body-md text-on-surface-variant">
-            Our team combines technical expertise with a first-hand understanding of Botswana's agricultural challenges.
-          </p>
-        </div>
-
-        
+    <section id="team" class="max-w-[1200px] mx-auto px-6 py-32">
+      <div class="mb-16 text-center md:text-left">
+        <h2 class="font-headline-lg text-4xl md:text-5xl text-primary mb-4 font-bold tracking-tight">The Minds Behind the Shield</h2>
+        <p class="text-on-surface-variant text-lg max-w-2xl">Combining technical expertise with a first-hand understanding of Botswana's agricultural challenges.</p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-gutter">
-
-        <!-- Team Card 1 -->
-        <div class="bg-white rounded-xl p-8 grassroots-shadow border border-outline-variant/10 group">
-          <div class="w-24 h-24 rounded-full bg-surface-container-high mb-6 overflow-hidden border-2 border-primary-container">
-            <img
-              alt="Tsotlhe Letebele"
-              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-              src="image/ot.jpeg"
-            >
+      <div class="grid md:grid-cols-3 gap-10">
+        <!-- Team Member 1 -->
+        <div class="group bg-white rounded-2xl p-8 grassroots-shadow border border-gray-100 flex flex-col hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div class="w-28 h-28 rounded-full bg-primary/5 mb-6 overflow-hidden border-4 border-primary/10 group-hover:border-primary/30 transition-colors mx-auto md:mx-0">
+            <img alt="Otumiseng Letebele" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="image/ot.jpeg">
           </div>
-
-          <h3 class="font-headline-md text-headline-md text-primary">
-            Tsotlhe Letebele
-          </h3>
-
-          <p class="font-label-sm text-label-sm text-on-tertiary-fixed-variant mb-4 uppercase">
-            Lead Developer
-          </p>
-
-          <p class="font-body-md text-body-md text-on-surface-variant">
-            Spearheading the core AI architecture and platform stability to ensure reliable support for farmers.
-          </p>
+          <h3 class="font-headline-md text-2xl text-primary font-bold text-center md:text-left">Otumiseng Letebele</h3>
+          <p class="text-secondary font-bold text-sm mb-2 uppercase tracking-wide text-center md:text-left">Lead Developer</p>
+          <p class="text-on-surface-variant text-xs mb-6 font-medium leading-relaxed text-center md:text-left">BSc Honours Computer Systems Engineering, University of Sunderland<br>MSc Candidate Project Management, University of Sunderland</p>
+          <p class="text-on-surface-variant mt-auto leading-relaxed text-center md:text-left">Spearheading the core AI architecture and platform stability to ensure reliable support for farmers.</p>
         </div>
 
-        <!-- Team Card 2 -->
-        <div class="bg-white rounded-xl p-8 grassroots-shadow border border-outline-variant/10 group">
-          <div class="w-24 h-24 rounded-full bg-surface-container-high mb-6 overflow-hidden border-2 border-primary-container">
-            <img
-              alt="Kaone Keboetseng"
-              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-              src="image/ko.png"
-            >
+        <!-- Team Member 2 -->
+        <div class="group bg-white rounded-2xl p-8 grassroots-shadow border border-gray-100 flex flex-col hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div class="w-28 h-28 rounded-full bg-primary/5 mb-6 overflow-hidden border-4 border-primary/10 group-hover:border-primary/30 transition-colors mx-auto md:mx-0">
+            <img alt="Kaone Keboetseng" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="image/ko.png">
           </div>
-
-          <h3 class="font-headline-md text-headline-md text-primary">
-            Kaone Keboetseng
-          </h3>
-
-          <p class="font-label-sm text-label-sm text-on-tertiary-fixed-variant mb-4 uppercase">
-            UI/UX Design
-          </p>
-
-          <p class="font-body-md text-body-md text-on-surface-variant">
-            Crafting accessible, field-friendly interfaces that feel simple, clear, and practical for everyday use.
-          </p>
+          <h3 class="font-headline-md text-2xl text-primary font-bold text-center md:text-left">Kaone Keboetseng</h3>
+          <p class="text-secondary font-bold text-sm mb-2 uppercase tracking-wide text-center md:text-left">UI/UX Design</p>
+          <p class="text-on-surface-variant text-xs mb-6 font-medium leading-relaxed text-center md:text-left">BSc Honours Computer Systems Engineering, University of Sunderland</p>
+          <p class="text-on-surface-variant mt-auto leading-relaxed text-center md:text-left">Crafting accessible, field-friendly interfaces that feel simple, clear, and practical for everyday use.</p>
         </div>
 
-        <!-- Team Card 3 -->
-        <div class="bg-white rounded-xl p-8 grassroots-shadow border border-outline-variant/10 group">
-          <div class="w-24 h-24 rounded-full bg-surface-container-high mb-6 overflow-hidden border-2 border-primary-container">
-            <img
-              alt="Phineous Sebopelo"
-              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-              src="image/p.png"
-            >
+        <!-- Team Member 3 -->
+        <div class="group bg-white rounded-2xl p-8 grassroots-shadow border border-gray-100 flex flex-col hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div class="w-28 h-28 rounded-full bg-primary/5 mb-6 overflow-hidden border-4 border-primary/10 group-hover:border-primary/30 transition-colors mx-auto md:mx-0">
+            <img alt="Phineous Sebopelo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="image/p copy.png">
           </div>
-
-          <h3 class="font-headline-md text-headline-md text-primary">
-            Phineous Sebopelo
-          </h3>
-
-          <p class="font-label-sm text-label-sm text-on-tertiary-fixed-variant mb-4 uppercase">
-            Data Intelligence
-          </p>
-
-          <p class="font-body-md text-body-md text-on-surface-variant">
-            Bridging the gap between raw livestock data and actionable insights for preventative animal care.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Kitsiso Initiative Section -->
-    <section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-24 bg-surface-container-low rounded-3xl mb-12">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 class="font-headline-lg text-headline-lg text-primary mb-6">
-            Kitsiso Initiative
-          </h2>
-
-          <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
-            Our vision for 2026 is to scale AI-assisted livestock protection across Botswana, empowering farmers with real-time veterinary guidance, digital records, and early-warning support.
-          </p>
-
-       
-        </div>
-
-        <div class="grid grid-cols-2 gap-4">
-          <div class="aspect-square rounded-2xl bg-primary-container flex flex-col items-center justify-center p-6 text-center text-on-primary">
-            <span class="font-display-lg text-display-lg text-on-tertiary-container">
-              2026
-            </span>
-
-            <span class="font-label-sm text-label-sm">
-              Mission Goal
-            </span>
-          </div>
-
-          <div class="aspect-square rounded-2xl border-2 border-primary-container/20 flex flex-col items-center justify-center p-6 text-center text-primary bg-white">
-            <span class="font-display-lg text-display-lg">
-              100%
-            </span>
-
-            <span class="font-label-sm text-label-sm">
-              Locally Built
-            </span>
-          </div>
+          <h3 class="font-headline-md text-2xl text-primary font-bold text-center md:text-left">Phineous Sebopelo</h3>
+          <p class="text-secondary font-bold text-sm mb-2 uppercase tracking-wide text-center md:text-left">Data Intelligence</p>
+          <p class="text-on-surface-variant text-xs mb-6 font-medium leading-relaxed text-center md:text-left">BSc Honours Business Intelligence and Data Analytics, University of Sunderland</p>
+          <p class="text-on-surface-variant mt-auto leading-relaxed text-center md:text-left">Bridging the gap between raw livestock data and actionable insights for preventative animal care.</p>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-20">
-      <div class="bg-white rounded-3xl grassroots-shadow ghost-border p-8 md:p-12 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <span class="inline-block px-4 py-1.5 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full font-label-sm text-label-sm mb-5">
-            Contact
-          </span>
+    <section id="contact" class="max-w-[1200px] mx-auto px-6 pb-12">
+      <div class="bg-gradient-to-br from-primary to-primary-container text-white rounded-[2.5rem] shadow-2xl p-8 md:p-14 grid md:grid-cols-2 gap-12 items-center relative overflow-hidden">
+        <!-- Decorative abstract background -->
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-secondary opacity-20 rounded-full blur-3xl"></div>
 
-          <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
-            Want to learn more about Kitsiso?
-          </h2>
-
-          <p class="font-body-lg text-body-lg text-on-surface-variant">
-            Reach out to the Kitsiso team for partnerships, app demonstrations, farmer onboarding, or veterinary collaboration.
-          </p>
+        <div class="relative z-10">
+          <span class="inline-block px-4 py-1.5 bg-white/10 rounded-full font-bold text-sm mb-6 tracking-wide backdrop-blur-md border border-white/20">Contact Us</span>
+          <h2 class="font-headline-lg text-4xl md:text-5xl mb-6 font-bold tracking-tight">Want to learn more about Kitsiso?</h2>
+          <p class="text-white/80 text-lg leading-relaxed">Reach out to the team for partnerships, app demonstrations, farmer onboarding, or veterinary collaboration.</p>
         </div>
 
-        <div class="space-y-4">
-          <a href="mailto:info@kitsiso.co.bw" class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
-            <span class="material-symbols-outlined text-primary">mail</span>
-            <span class="font-bold text-primary">info@kitsiso.co.bw</span>
+        <div class="space-y-4 relative z-10">
+          <a href="mailto:info.kitsiso@gmail.com" class="group flex items-center gap-5 p-5 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/5 transition-all backdrop-blur-sm">
+            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined">mail</span>
+            </div>
+            <span class="font-bold text-lg">info.kitsiso@gmail.com</span>
           </a>
-
-          <a href="tel:+26700000000" class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
-            <span class="material-symbols-outlined text-primary">call</span>
-            <span class="font-bold text-primary">+267 7- --- ---</span>
+          <a href="tel:+267744555522" class="group flex items-center gap-5 p-5 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/5 transition-all backdrop-blur-sm">
+            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined">call</span>
+            </div>
+            <span class="font-bold text-lg">+267 74 455 5522</span>
           </a>
-
-          <div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low">
-            <span class="material-symbols-outlined text-primary">location_on</span>
-            <span class="font-bold text-primary">Gaborone, Botswana</span>
+          <div class="flex items-center gap-5 p-5 rounded-2xl bg-white/5 border border-white/5 backdrop-blur-sm">
+            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+              <span class="material-symbols-outlined text-white/70">location_on</span>
+            </div>
+            <span class="font-bold text-lg text-white/90">Gaborone, Botswana</span>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Privacy Section -->
-    <section id="privacy" class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop pb-20">
-      <div class="bg-surface-container-low rounded-3xl p-8 md:p-12">
-        <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
-          Privacy Commitment
-        </h2>
-
-        <p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
-          Kitsiso is committed to responsible handling of farmer, livestock, and location-related information. Data collected through the platform should be used to support animal health guidance, alerts, records, and service improvement while respecting user privacy and access control.
-        </p>
-      </div>
-    </section>
-
   </main>
 
   <!-- Footer -->
-  <footer class="w-full rounded-t-xl bg-primary-container dark:bg-primary">
-    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between gap-gutter">
-
-      <div class="space-y-4">
-        <a href="index.html" class="inline-block font-headline-md text-headline-md font-bold text-on-primary">
-          Kitsiso
+  <footer class="bg-primary text-white w-full">
+    <div class="max-w-[1200px] mx-auto px-6 py-16 flex flex-col md:flex-row justify-between gap-12">
+      <div class="space-y-6 max-w-sm">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="image/kitsiso-logo-white.png" alt="Kitsiso logo" class="h-10 w-auto opacity-95">
+          <span class="font-headline-lg text-3xl font-bold tracking-tight">Kitsiso</span>
         </a>
-
-        <p class="font-body-md text-body-md text-on-primary-container/80 max-w-xs">
-          Empowering Batswana farmers with the next generation of AI-driven livestock protection.
-        </p>
+        <p class="opacity-80 text-sm leading-relaxed">AI-powered livestock protection. Shielding Botswana's heritage through technology and veterinary expertise.</p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-
-        <div class="flex flex-col gap-3">
-          <span class="font-label-sm text-label-sm font-bold text-on-tertiary-container uppercase">
-            Platform
-          </span>
-
-          <a class="font-body-md text-body-md text-on-primary-container/80 hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container underline-offset-4" href="index.html">
-            Home
-          </a>
-
-          <a class="font-body-md text-body-md text-on-primary-container/80 hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container underline-offset-4" href="app.html">
-            App Showcase
-          </a>
-
-          <a class="font-body-md text-body-md text-on-primary-container/80 hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container underline-offset-4" href="pricing.html">
-            Pricing
-          </a>
+      <div class="grid grid-cols-2 gap-12 md:gap-20">
+        <div>
+          <h5 class="font-bold mb-6 tracking-widest uppercase text-xs text-secondary">Explore</h5>
+          <ul class="space-y-4 text-sm">
+            <li><a class="opacity-70 hover:text-white hover:opacity-100 transition-colors" href="index.html">Home</a></li>
+            <li><a class="opacity-70 hover:text-white hover:opacity-100 transition-colors" href="app.html">App Showcase</a></li>
+            <li><a class="opacity-70 hover:text-white hover:opacity-100 transition-colors" href="pricing.html">Pricing</a></li>
+          </ul>
         </div>
-
-        <div class="flex flex-col gap-3">
-          <span class="font-label-sm text-label-sm font-bold text-on-tertiary-container uppercase">
-            Company
-          </span>
-
-          <a class="font-body-md text-body-md text-on-tertiary-container font-semibold hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container underline-offset-4" href="about.html">
-            About Us
-          </a>
-
-          <a class="font-body-md text-body-md text-on-primary-container/80 hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container underline-offset-4" href="about.html#contact">
-            Contact
-          </a>
-
-          <a class="font-body-md text-body-md text-on-primary-container/80 hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container underline-offset-4" href="about.html#privacy">
-            Privacy Policy
-          </a>
+        <div>
+          <h5 class="font-bold mb-6 tracking-widest uppercase text-xs text-secondary">Company</h5>
+          <ul class="space-y-4 text-sm">
+            <li><a class="opacity-70 hover:text-white hover:opacity-100 transition-colors" href="about.html">About Us</a></li>
+            <li><a class="opacity-70 hover:text-white hover:opacity-100 transition-colors" href="about.html#contact">Contact</a></li>
+            <li><a class="opacity-70 hover:text-white hover:opacity-100 transition-colors" href="privacy.html">Privacy Policy</a></li>
+          </ul>
         </div>
-
-        <div class="flex flex-col gap-3">
-          <span class="font-label-sm text-label-sm font-bold text-on-tertiary-container uppercase">
-            Action
-          </span>
-
-          <a class="font-body-md text-body-md text-on-primary-container/80 hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container underline-offset-4" href="app.html#download">
-            Download App
-          </a>
-
-          <a class="font-body-md text-body-md text-on-primary-container/80 hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container underline-offset-4" href="pricing.html">
-            View Plans
-          </a>
-        </div>
-
       </div>
     </div>
-
-    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-6 border-t border-on-primary-container/10">
-      <p class="font-label-sm text-label-sm text-on-primary-container/60 text-center md:text-left">
-        © 2026 Kitsiso. Thebe ya Leruo.
-      </p>
+    <div class="max-w-[1200px] mx-auto px-6 py-8 border-t border-white/10 text-center md:text-left text-white/50 text-xs tracking-wide">
+      © 2026 Kitsiso. Thebe ya Leruo.
     </div>
   </footer>
-
 </body>
 </html>
